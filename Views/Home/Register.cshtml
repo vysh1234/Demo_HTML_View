@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{ ViewData["Title"] = "Home page"; }
+@model RegisterViewModel
+
+<form asp-controller="Demo" asp-action="RegisterInput" method="post">
+    Email:  <input asp-for="Email" /> <br />
+    Password: <input asp-for="Password" /><br />
+    Date: <input asp-for="Date" /><br /><br />
+    <button type="submit">Register</button>
+ </form>
+
+<form asp-controller="Home" asp-action="Index" method="post">
+    <select asp-for="Country" asp-items="Model.Countries"></select>
+    <br /><button type="submit">Register</button>
+</form>
